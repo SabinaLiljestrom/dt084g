@@ -42,6 +42,7 @@ function addItem() {
     //lägger till klickhanterare som tar bort det man klickar på i detta element.
     newEl.addEventListener("click", function (e) {
         e.target.remove();
+        saveItem();
     });
     //raderar inputfält efter att det lagts till och gör så att det inte går att klicka på knappen och lägga till tomt fält
     newTodoEl.value = "";
@@ -82,8 +83,6 @@ function loadStorage() {
             e.target.remove();
             //lagra listan på nytt utan det borttagna element
             saveItem();
-            //uppdaterar array i localstorage utan borttagna element
-            localStorage.removeItem("item");
         });
     }
 }
