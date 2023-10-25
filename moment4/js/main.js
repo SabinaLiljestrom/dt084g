@@ -84,7 +84,6 @@ function loadStorage() {
             saveItem();
         });
     }
-    saveItem();
 }
 //rensa lista med knapp
 function clearStorage() {
