@@ -82,10 +82,9 @@ function loadStorage() {
             e.target.remove();
             //lagra listan på nytt utan det borttagna element
             saveItem();
-            //uppdaterar array i localstorage utan borttagna element
-            localStorage.removeItem("item");
         });
     }
+    saveItem();
 }
 //rensa lista med knapp
 function clearStorage() {
